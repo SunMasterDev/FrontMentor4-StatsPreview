@@ -8,16 +8,18 @@ const CardStatus = () => {
         { label: 'QUERIES',    value: '12M+' },
       ];
   return (
-    <Card className="flex flex-col-reverse text-center md:flex-row overflow-hidden max-w-[76rem] bg-desaturatedBlue text-white">
-        <CardContent className="flex-1 p-4 md:p-16 space-y-6 md:text-left">
-            <h1 className="text-3xl md:text-4xl font-bold font-display">
+    <Card className="flex flex-col-reverse text-center md:flex-row overflow-hidden max-w-[72rem] bg-desaturatedBlue text-white">
+        <CardContent className="flex-1">
+           <div className="container p-4 md:p-16 space-y-6 md:text-left">
+                 <h1 className="text-[30px] md:text-4xl font-bold font-display">
                  Get <span className="text-softViolet">insights</span> that help your business grow.
             </h1>
             <p className="text-base md:text-base text-white/75 md:pt-6">
                 Discover the benefits of data analytics and make <br /> better decisions regarding revenue, customer <br />experience, and overall efficiency.
             </p>
             {/* Status */}
-            <div className="flex flex-col md:flex-row gap-6 pt-4 md:pt-10 justify-between">
+            <div className="container">
+                     <div className="flex flex-col md:flex-row gap-6 pt-4 md:pt-10 justify-between">
                 {
                     stats.map((items,index)=>(
                         <div key={index}>
@@ -27,13 +29,15 @@ const CardStatus = () => {
                     ))
                 }
             </div>
+            </div>
+           </div>
         </CardContent>
         {/* Image */}
             <div className="relative flex-1 md:">
                 <img src={headerDesktop} alt="image-header-desktop" 
-                className="h-full w-full object-cover brightness-110"/>
+                className="h-full w-full object-cover brightness-[0.45]"/>
                 <div className="absolute inset-0 bg-[#A95CD8]"
-                style={{ mixBlendMode: "multiply", opacity:"0.80"}}></div>
+                style={{ mixBlendMode: "hard-light", opacity:"0.6"}}></div>
             </div>
     </Card>
   )
