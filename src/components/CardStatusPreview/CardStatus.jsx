@@ -18,8 +18,7 @@ const CardStatus = () => {
                 Discover the benefits of data analytics and make <br /> better decisions regarding revenue, customer <br />experience, and overall efficiency.
             </p>
             {/* Status */}
-            <div className="container">
-                     <div className="flex flex-col md:flex-row gap-6 pt-4 md:pt-10 justify-between">
+                     <div className="flex flex-col md:flex-row gap-6 pt-4 md:pt-10 justify-between container">
                 {
                     stats.map((items,index)=>(
                         <div key={index}>
@@ -29,16 +28,15 @@ const CardStatus = () => {
                     ))
                 }
             </div>
-            </div>
            </div>
         </CardContent>
         {/* Image */}
-            <div className="relative flex-1 md:">
-                <img src={headerDesktop} alt="image-header-desktop" 
-                className="h-full w-full object-cover brightness-[0.45]"/>
-                <div className="absolute inset-0 bg-[#A95CD8]"
+            <div className="relative flex-1 container">
+                    <img src={headerDesktop} alt="image-header-desktop" 
+                className="h-full w-full object-cover brightness-[0.6]"/>
+                <div className="absolute inset-0 bg-softViolet/70"
                 style={{ mixBlendMode: "hard-light", opacity:"0.6"}}></div>
-            </div>
+                </div>
     </Card>
   )
 }
